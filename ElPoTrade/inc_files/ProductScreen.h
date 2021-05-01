@@ -4,6 +4,7 @@
 #include <vector>
 #include "Lamp.h"
 #include "ProductManager.h"
+#include "LampWidget.h"
 
 class ProductScreen : public QWidget
 {

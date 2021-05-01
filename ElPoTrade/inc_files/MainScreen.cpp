@@ -2,6 +2,8 @@
 
 MainScreen::MainScreen(QWidget* wgt) : QWidget{ wgt }
 {
+	//setAttribute(Qt::WA_DeleteOnClose);
+
 	QRect screen_size = QApplication::desktop()->screenGeometry();
 	setMinimumSize(screen_size.width() / 5, screen_size.height() / 2);
 	resize(screen_size.width() / 5, screen_size.height() / 2);
