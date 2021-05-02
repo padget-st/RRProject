@@ -2,7 +2,7 @@
 
 MainScreen::MainScreen(QWidget* wgt) : QWidget{ wgt }
 {
-	//setAttribute(Qt::WA_DeleteOnClose);
+	setAttribute(Qt::WA_DeleteOnClose);
 
 	QRect screen_size = QApplication::desktop()->screenGeometry();
 	setMinimumSize(screen_size.width() / 5, screen_size.height() / 2);
@@ -35,5 +35,10 @@ MainScreen::MainScreen(QWidget* wgt) : QWidget{ wgt }
 	vert_lay->addWidget(m_pb_suggest);
 
 	setLayout(vert_lay);
+}
+
+MainScreen::~MainScreen()
+{
+	delete layout();
 }
 

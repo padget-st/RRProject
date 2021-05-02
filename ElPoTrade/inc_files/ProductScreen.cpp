@@ -1,7 +1,7 @@
 #include "ProductScreen.h"
 
 ProductScreen::ProductScreen(QWidget* wgt)
-	: QWidget{ wgt }, m_list{new QListWidget(this)}, m_pb_close{new QPushButton(this) }
+	: QWidget{ wgt }, m_list{new QListWidget}, m_pb_close{new QPushButton }
 {
 	setAttribute(Qt::WA_DeleteOnClose);
 
@@ -10,7 +10,7 @@ ProductScreen::ProductScreen(QWidget* wgt)
 	connect(m_pb_close, SIGNAL(clicked()), SIGNAL(signalClosed()));
 
 	ProductManager pm;
-	std::shared_ptr<std::vector<Lamp>> product = pm.get_catalog("SELECT lamp_id, name, type, power FROM Lamp");
+	std::shared_ptr<std::vector<Lamp>> product{ pm.get_catalog("SELECT lamp_id, name, type, power FROM Lamp") };
 
 
 	QListWidgetItem* list_item{ nullptr };
@@ -26,4 +26,9 @@ ProductScreen::ProductScreen(QWidget* wgt)
 	lay->addWidget(m_list);
 	lay->addWidget(m_pb_close);
 	setLayout(lay);
+}
+
+ProductScreen::~ProductScreen()
+{
+	delete layout();
 }

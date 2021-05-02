@@ -9,6 +9,7 @@ private:
 	QLabel* m_lbl_banner;
 public:
 	MainScreen(QWidget* wgt = 0);
+	~MainScreen();
 signals:
 	void catalogClicked();
 

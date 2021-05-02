@@ -14,6 +14,7 @@ private:
 	QPushButton* m_pb_close;
 public:
 	ProductScreen(QWidget* wgt = 0);
+	~ProductScreen();
 signals:
 	void signalClosed();
 };
