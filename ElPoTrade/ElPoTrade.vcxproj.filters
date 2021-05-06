@@ -17,56 +17,95 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{ec589336-03d5-4eec-a18d-d35ca7997928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Services">
+      <UniqueIdentifier>{960a83af-9008-4afb-96b2-424cc28d6858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataAccess">
+      <UniqueIdentifier>{a0d2b719-2bb5-454f-936f-b09ba7871225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{700012fa-d3df-4382-bebb-182400a89ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{d4cb41c9-e7a0-4742-8c04-492d468f2bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess">
+      <UniqueIdentifier>{79fc366c-229c-4f16-9eff-73998708e57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{125149e4-a4f0-4b06-94b9-349a85c07c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Services">
+      <UniqueIdentifier>{66373194-9b40-4e61-9986-650d158daeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models">
+      <UniqueIdentifier>{05e6e823-1ce9-4cc2-b177-caf678252b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{2a6da1f5-486d-4ccc-94d4-4c3da5acf35c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\sqlite3.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\GUI\LampWidget.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\ProductDataManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\GUI\MainScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\ProductManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\GUI\ProductScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\MainScreen.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\GUI\ScreenStack.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\ProductScreen.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\DataAccess\sqlite3.c">
+      <Filter>Source Files\DataAccess</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\ScreenStack.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\DataAccess\ProductDataManager.cpp">
+      <Filter>Source Files\DataAccess</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\LampWidget.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="inc_files\Services\ProductManager.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\Services\ResourceManager.cpp">
+      <Filter>Source Files\Services</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc_files\ProductDataManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="inc_files\Services\ProductManager.h">
+      <Filter>Header Files\Services</Filter>
     </ClInclude>
-    <ClInclude Include="inc_files\Lamp.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="inc_files\DataAccess\sqlite3.h">
+      <Filter>Header Files\DataAccess</Filter>
     </ClInclude>
-    <ClInclude Include="inc_files\ProductManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="inc_files\DataAccess\ProductDataManager.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\Common\Lamp.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\Services\ResourceManager.h">
+      <Filter>Header Files\Services</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="inc_files\MainScreen.h">
-      <Filter>Header Files</Filter>
+    <QtMoc Include="inc_files\GUI\LampWidget.h">
+      <Filter>Header Files\GUI</Filter>
     </QtMoc>
-    <QtMoc Include="inc_files\ProductScreen.h">
-      <Filter>Header Files</Filter>
+    <QtMoc Include="inc_files\GUI\MainScreen.h">
+      <Filter>Header Files\GUI</Filter>
     </QtMoc>
-    <QtMoc Include="inc_files\ScreenStack.h">
-      <Filter>Header Files</Filter>
+    <QtMoc Include="inc_files\GUI\ProductScreen.h">
+      <Filter>Header Files\GUI</Filter>
     </QtMoc>
-    <QtMoc Include="inc_files\LampWidget.h">
-      <Filter>Header Files</Filter>
+    <QtMoc Include="inc_files\GUI\ScreenStack.h">
+      <Filter>Header Files\GUI</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

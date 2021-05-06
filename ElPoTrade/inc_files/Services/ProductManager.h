@@ -26,5 +26,5 @@ private:
 
 public:
 	ProductManager();
-	std::shared_ptr<std::vector<Lamp>> get_catalog(const char*);
+	std::shared_ptr<std::vector<Lamp>> get_catalog();
 };

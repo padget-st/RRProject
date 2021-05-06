@@ -40,10 +40,10 @@ ProductManager::lamp_col_type ProductManager::get_col_type(const std::string& st
 ProductManager::ProductManager() : m_pLamps{new std::vector<Lamp>()}
 {}
 
-std::shared_ptr<std::vector<Lamp>> ProductManager::get_catalog(const char* sql_query)
+std::shared_ptr<std::vector<Lamp>> ProductManager::get_catalog()
 {
 	ProductDataManager pdm;
-	std::string str_data{ pdm.evaluate_sql_query(sql_query) }, temp_str{};
+	std::string str_data{ pdm.evaluate_sql_query("SELECT lamp_id, name, type, power FROM Lamp") }, temp_str{};
 	std::istringstream is{ str_data };
 	while (true)
 	{
