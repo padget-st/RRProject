@@ -1,6 +1,5 @@
 #pragma once
 #include <QtWidgets>
-#include <memory>
 #include <vector>
 #include "Lamp.h"
 #include "ProductManager.h"
