@@ -12,11 +12,18 @@ ScreenStack::ScreenStack() : m_mapper{ new QSignalMapper(this) }
 
 void ScreenStack::slotShowCatalog()
 {
-	ProductScreen* ps = new ProductScreen;
-	connect(ps, SIGNAL(signalClosed()), m_mapper, SLOT(map()));
-	addWidget(ps);
-	m_mapper->setMapping(ps, ps);
-	setCurrentWidget(ps);
+	try
+	{
+		ProductScreen* ps = new ProductScreen;
+		connect(ps, SIGNAL(signalClosed()), m_mapper, SLOT(map()));
+		addWidget(ps);
+		m_mapper->setMapping(ps, ps);
+		setCurrentWidget(ps);
+	}
+	catch (std::exception& e)
+	{
+		QMessageBox::warning(0, "Error", "Can't open the window.\n" + QString(e.what()), QMessageBox::Ok);
+	}
 }
 
 void ScreenStack::slotDeleteWidget(QWidget* wgt)

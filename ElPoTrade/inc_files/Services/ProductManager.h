@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include "ProductDataManager.h"
-#include "Lamp.h"
 
 class ProductManager
 {

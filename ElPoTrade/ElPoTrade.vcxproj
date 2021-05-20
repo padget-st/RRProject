@@ -60,13 +60,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -97,6 +97,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="inc_files\Common\Lamp.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\BeanLoader.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\BeanUpdater.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\ChildKiller.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\CppModel.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\Database.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\ModelExtractor.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\Registry.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\shared_res.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\SQLiteStmt.cpp" />
+    <ClCompile Include="inc_files\DataAccess\hiberlite\Visitor.cpp" />
     <ClCompile Include="inc_files\DataAccess\ProductDataManager.cpp" />
     <ClCompile Include="inc_files\DataAccess\sqlite3.c" />
     <ClCompile Include="inc_files\GUI\LampWidget.cpp" />
@@ -109,6 +120,32 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc_files\Common\Lamp.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanLoader.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanLoader_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanUpdater.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanUpdater_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ChildKiller.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ChildKiller_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\common.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\CppModel.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Database.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Database_tmpl_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\db_error.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\hiberdefs.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\hiberlite.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ModelExtractor.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ModelExtractor_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\nvp.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Registry.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Registry_impl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\shared_res.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\some_types.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\SQLiteStmt.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\UpdateVisitor_tmpl.hpp" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Visitor.h" />
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Visitor_tmpl_impl.hpp" />
     <ClInclude Include="inc_files\DataAccess\ProductDataManager.h" />
     <ClInclude Include="inc_files\DataAccess\sqlite3.h" />
     <ClInclude Include="inc_files\Services\ProductManager.h" />
@@ -116,7 +153,7 @@
     <QtMoc Include="inc_files\GUI\ScreenStack.h" />
     <QtMoc Include="inc_files\GUI\ProductScreen.h" />
     <QtMoc Include="inc_files\GUI\MainScreen.h" />
-    <QtMoc Include="inc_files\GUI\LampWidget.h" />
+    <ClInclude Include="inc_files\GUI\LampWidget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

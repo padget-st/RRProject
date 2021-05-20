@@ -47,6 +47,12 @@
     <Filter Include="Header Files\Models">
       <UniqueIdentifier>{2a6da1f5-486d-4ccc-94d4-4c3da5acf35c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DataAccess\hiberlite">
+      <UniqueIdentifier>{6de162de-7163-419a-89f1-47f6e50fe487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess\hiberlite">
+      <UniqueIdentifier>{8a38067b-a3dc-441b-bdd7-34b03499bbd9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -76,6 +82,39 @@
     <ClCompile Include="inc_files\Services\ResourceManager.cpp">
       <Filter>Source Files\Services</Filter>
     </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\BeanLoader.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\BeanUpdater.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\ChildKiller.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\CppModel.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\Database.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\ModelExtractor.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\Registry.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\shared_res.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\SQLiteStmt.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\DataAccess\hiberlite\Visitor.cpp">
+      <Filter>Source Files\DataAccess\hiberlite</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\Common\Lamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc_files\Services\ProductManager.h">
@@ -93,11 +132,89 @@
     <ClInclude Include="inc_files\Services\ResourceManager.h">
       <Filter>Header Files\Services</Filter>
     </ClInclude>
+    <ClInclude Include="inc_files\GUI\LampWidget.h">
+      <Filter>Header Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanLoader.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanLoader_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanUpdater.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanUpdater_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ChildKiller.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ChildKiller_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\common.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\CppModel.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Database.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Database_tmpl_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\db_error.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\hiberdefs.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\hiberlite.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ModelExtractor.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\ModelExtractor_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\nvp.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Registry.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Registry_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\shared_res.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\some_types.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\SQLiteStmt.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\UpdateVisitor_tmpl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Visitor.h">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\DataAccess\hiberlite\Visitor_tmpl_impl.hpp">
+      <Filter>Header Files\DataAccess\hiberlite</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="inc_files\GUI\LampWidget.h">
-      <Filter>Header Files\GUI</Filter>
-    </QtMoc>
     <QtMoc Include="inc_files\GUI\MainScreen.h">
       <Filter>Header Files\GUI</Filter>
     </QtMoc>

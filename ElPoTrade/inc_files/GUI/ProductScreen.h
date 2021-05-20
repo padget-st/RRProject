@@ -1,10 +1,8 @@
 #pragma once
 #include <QtWidgets>
 #include <vector>
-#include "Lamp.h"
 #include "ProductManager.h"
 #include "ResourceManager.h"
-#include "LampWidget.h"
 
 class ProductScreen : public QWidget
 {
