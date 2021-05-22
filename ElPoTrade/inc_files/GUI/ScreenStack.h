@@ -2,6 +2,7 @@
 #include <QtWidgets>
 #include "MainScreen.h"
 #include "ProductScreen.h"
+#include "LampScreen.h"
 
 class ScreenStack : public QStackedWidget
 {
@@ -12,5 +13,6 @@ public:
 	ScreenStack();
 public slots:
 	void slotShowCatalog();
+	void slotShowProductItem(QListWidgetItem*);
 	void slotDeleteWidget(QWidget*);
 };

@@ -58,7 +58,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="inc_files\GUI\LampWidget.cpp">
+    <ClCompile Include="inc_files\GUI\LampScreen.cpp">
       <Filter>Source Files\GUI</Filter>
     </ClCompile>
     <ClCompile Include="inc_files\GUI\MainScreen.cpp">
@@ -131,9 +131,6 @@
     </ClInclude>
     <ClInclude Include="inc_files\Services\ResourceManager.h">
       <Filter>Header Files\Services</Filter>
-    </ClInclude>
-    <ClInclude Include="inc_files\GUI\LampWidget.h">
-      <Filter>Header Files\GUI</Filter>
     </ClInclude>
     <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr.h">
       <Filter>Header Files\DataAccess\hiberlite</Filter>
@@ -222,6 +219,9 @@
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
     <QtMoc Include="inc_files\GUI\ScreenStack.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="inc_files\GUI\LampScreen.h">
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
   </ItemGroup>

@@ -110,7 +110,7 @@
     <ClCompile Include="inc_files\DataAccess\hiberlite\Visitor.cpp" />
     <ClCompile Include="inc_files\DataAccess\ProductDataManager.cpp" />
     <ClCompile Include="inc_files\DataAccess\sqlite3.c" />
-    <ClCompile Include="inc_files\GUI\LampWidget.cpp" />
+    <ClCompile Include="inc_files\GUI\LampScreen.cpp" />
     <ClCompile Include="inc_files\GUI\MainScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ProductScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ScreenStack.cpp" />
@@ -153,7 +153,7 @@
     <QtMoc Include="inc_files\GUI\ScreenStack.h" />
     <QtMoc Include="inc_files\GUI\ProductScreen.h" />
     <QtMoc Include="inc_files\GUI\MainScreen.h" />
-    <ClInclude Include="inc_files\GUI\LampWidget.h" />
+    <QtMoc Include="inc_files\GUI\LampScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

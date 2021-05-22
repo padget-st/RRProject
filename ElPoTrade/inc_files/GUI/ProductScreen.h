@@ -14,6 +14,8 @@ private:
 public:
 	ProductScreen(QWidget* wgt = 0);
 	~ProductScreen();
+	void show_catalog();
 signals:
 	void signalClosed();
+	void signalItemSelected(QListWidgetItem*);
 };

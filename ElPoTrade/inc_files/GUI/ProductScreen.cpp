@@ -23,8 +23,19 @@ ProductScreen::ProductScreen(QWidget* wgt)
 	connect(m_pb_close, SIGNAL(clicked()), SLOT(close()));
 	connect(m_pb_close, SIGNAL(clicked()), SIGNAL(signalClosed()));
 
+	connect(m_list, SIGNAL(itemDoubleClicked(QListWidgetItem*)), 
+		SIGNAL(signalItemSelected(QListWidgetItem*)));
+
+	QVBoxLayout* lay = new QVBoxLayout;
+	lay->addWidget(m_list);
+	lay->addWidget(m_pb_close);
+	setLayout(lay);
+}
+
+void ProductScreen::show_catalog()
+{
 	ProductManager pm;
-	std::vector<Lamp> product{ pm.get_catalog()};
+	std::vector<Lamp> product{ pm.get_catalog() };
 
 	QListWidgetItem* list_item{ nullptr };
 	/*temporary*/QPixmap pix_icon{ get_pixIcon("lamp.jpg") };
@@ -35,11 +46,6 @@ ProductScreen::ProductScreen(QWidget* wgt)
 		list_item->setIcon(pix_icon);//(get_pixIcon("lamp.jpg"));
 	}
 	m_list->setIconSize(QSize(32, 32));
-
-	QVBoxLayout* lay = new QVBoxLayout;
-	lay->addWidget(m_list);
-	lay->addWidget(m_pb_close);
-	setLayout(lay);
 }
 
 ProductScreen::~ProductScreen()
