@@ -32,8 +32,27 @@ void ScreenStack::slotShowProductItem(QListWidgetItem* item)
 {
 	try
 	{
+		ProductManager pm;
+		Lamp lamp{ pm.get_lamp(item->data(Qt::UserRole).toInt()) };
+
 		LampScreen* lw = new LampScreen;
-		lw->setLabelText(item->text());
+
+		ResourceManager rm;
+		std::vector<uchar> v_icon{ rm.get_icon(lamp.images_url[0]) };
+		QPixmap pix;
+		if (!pix.loadFromData(v_icon.data(), v_icon.size()))
+		{
+			throw std::runtime_error("can't open an icon");
+		}
+
+		lw->setLabelImage(pix);
+		lw->setLabelText("Name: " + QString(lamp.name.c_str())
+			+ "\nType: " + QString(lamp.type.c_str())
+			+ "\nPower: " + QString::number(lamp.power)
+			+ "\nEfficiency: " + QString::number(lamp.efficiency)
+			+ "\nLightflow: " + QString::number(lamp.lightflow)
+			+ "\nColor temperature: " + QString::number(lamp.color_temperature));
+
 		connect(lw, SIGNAL(signalClosed()), m_mapper, SLOT(map()));
 		addWidget(lw);
 		m_mapper->setMapping(lw, lw);

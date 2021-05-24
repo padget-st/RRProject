@@ -35,15 +35,16 @@ ProductScreen::ProductScreen(QWidget* wgt)
 void ProductScreen::show_catalog()
 {
 	ProductManager pm;
-	std::vector<Lamp> product{ pm.get_catalog() };
+	std::vector<std::pair<Lamp, int>> product{ pm.get_catalog() };
 
 	QListWidgetItem* list_item{ nullptr };
-	/*temporary*/QPixmap pix_icon{ get_pixIcon("lamp.jpg") };
+	/*temporary*///QPixmap pix_icon{ get_pixIcon("lamp.jpg") };
 	for (auto& elem : product)
 	{
-		list_item = new QListWidgetItem("Name: " + QString(elem.name.c_str()) + "\nType: "
-			+ QString(elem.type.c_str()) + "\nPower: " + QString::number(elem.power), m_list);
-		list_item->setIcon(pix_icon);//(get_pixIcon("lamp.jpg"));
+		list_item = new QListWidgetItem("Name: " + QString(elem.first.name.c_str()) + "\nType: "
+			+ QString(elem.first.type.c_str()) + "\nPower: " + QString::number(elem.first.power), m_list);
+		list_item->setIcon(get_pixIcon(elem.first.images_url[0]));//(get_pixIcon("lamp.jpg"));
+		list_item->setData(Qt::UserRole, elem.second);
 	}
 	m_list->setIconSize(QSize(32, 32));
 }

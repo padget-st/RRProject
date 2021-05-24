@@ -4,7 +4,11 @@
 
 class ProductManager
 {
+private:
+	ProductDataManager* m_pdm;
 public:
-	//ProductManager();
-	std::vector<Lamp> get_catalog();
+	ProductManager();
+	std::vector<std::pair<Lamp, int>> get_catalog() const;
+	Lamp get_lamp(int) const;
+	~ProductManager();
 };

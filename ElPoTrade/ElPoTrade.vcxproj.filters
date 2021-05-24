@@ -113,7 +113,7 @@
       <Filter>Source Files\DataAccess\hiberlite</Filter>
     </ClCompile>
     <ClCompile Include="inc_files\Common\Lamp.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

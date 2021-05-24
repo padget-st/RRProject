@@ -8,10 +8,10 @@ private:
 	QLabel* m_image;
 	QLabel* m_info;
 	QPushButton* m_pb_close;
-	//int m_lamp_id;
 public:
 	LampScreen(QWidget* wgt = 0);
-	void setLabelText(const QString& str);
+	void setLabelImage(const QPixmap&);
+	void setLabelText(const QString&);
 	~LampScreen();
 signals:
 	void signalClosed();
