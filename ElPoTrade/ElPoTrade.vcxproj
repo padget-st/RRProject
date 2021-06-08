@@ -60,13 +60,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -98,56 +98,56 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="inc_files\Common\Lamp.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\BeanLoader.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\BeanUpdater.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\ChildKiller.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\CppModel.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\Database.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\ModelExtractor.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\Registry.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\shared_res.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\SQLiteStmt.cpp" />
-    <ClCompile Include="inc_files\DataAccess\hiberlite\Visitor.cpp" />
     <ClCompile Include="inc_files\DataAccess\ProductDataManager.cpp" />
-    <ClCompile Include="inc_files\DataAccess\sqlite3.c" />
     <ClCompile Include="inc_files\GUI\LampScreen.cpp" />
     <ClCompile Include="inc_files\GUI\MainScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ProductScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ScreenStack.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\BeanLoader.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\BeanUpdater.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\ChildKiller.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\CppModel.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\Database.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\ModelExtractor.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\Registry.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\shared_res.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\sqlite3.c" />
+    <ClCompile Include="inc_files\Libs\hiberlite\SQLiteStmt.cpp" />
+    <ClCompile Include="inc_files\Libs\hiberlite\Visitor.cpp" />
     <ClCompile Include="inc_files\Services\ProductManager.cpp" />
     <ClCompile Include="inc_files\Services\ResourceManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc_files\Common\Lamp.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanLoader.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanLoader_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanUpdater.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\BeanUpdater_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\bean_ptr_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\ChildKiller.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\ChildKiller_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\common.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\CppModel.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\Database.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\Database_tmpl_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\db_error.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\hiberdefs.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\hiberlite.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\ModelExtractor.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\ModelExtractor_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\nvp.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\Registry.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\Registry_impl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\shared_res.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\some_types.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\SQLiteStmt.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\UpdateVisitor_tmpl.hpp" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\Visitor.h" />
-    <ClInclude Include="inc_files\DataAccess\hiberlite\Visitor_tmpl_impl.hpp" />
     <ClInclude Include="inc_files\DataAccess\ProductDataManager.h" />
-    <ClInclude Include="inc_files\DataAccess\sqlite3.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\BeanLoader.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\BeanLoader_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\BeanUpdater.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\BeanUpdater_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\bean_ptr.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\bean_ptr_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\ChildKiller.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\ChildKiller_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\common.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\CppModel.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\Database.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\Database_tmpl_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\db_error.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\hiberdefs.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\hiberlite.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\ModelExtractor.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\ModelExtractor_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\nvp.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\Registry.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\Registry_impl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\shared_res.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\some_types.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\sqlite3.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\SQLiteStmt.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\UpdateVisitor_tmpl.hpp" />
+    <ClInclude Include="inc_files\Libs\hiberlite\Visitor.h" />
+    <ClInclude Include="inc_files\Libs\hiberlite\Visitor_tmpl_impl.hpp" />
     <ClInclude Include="inc_files\Services\ProductManager.h" />
     <ClInclude Include="inc_files\Services\ResourceManager.h" />
     <QtMoc Include="inc_files\GUI\ScreenStack.h" />

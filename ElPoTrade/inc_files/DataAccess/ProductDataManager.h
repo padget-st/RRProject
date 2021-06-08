@@ -3,7 +3,7 @@
 #include <utility>
 #include "Lamp.h"
 
-constexpr char* DB_FILE_PATH_PRODUCTS = "S:/perfect_circle/RRProject/ElPoTrade/database/DB_FILE.db";
+constexpr char* DB_FILE_PATH_PRODUCTS = "database/DB_FILE.db";
 
 class ProductDataManager
 {
