@@ -1,0 +1,1 @@
+install(FILES DB_FILE.db DESTINATION database)

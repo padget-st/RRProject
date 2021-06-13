@@ -11,7 +11,7 @@
 #include <iostream>
 #include <algorithm>
 
-#include <sqlite3.h>
+#include "sqlite3.h"
 
 namespace hiberlite{
 

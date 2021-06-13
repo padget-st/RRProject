@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="S:\perfect_circle\RRProject\ElPoTrade\cmake_bin\CMakeFiles\3a3a785888f40a057b109f896d6a2f8f\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EB44EB9A-9D5D-32C6-91C9-AA16B3F8266F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

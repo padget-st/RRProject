@@ -6,7 +6,7 @@
 class ResourceManager
 {
 private:
-	const std::string icon_path{ "S:/perfect_circle/RRProject/ElPoTrade/icons/" };
+	const std::string icon_path{ "icons/" };
 public:
 	//ResourceManager();
 	std::vector<unsigned char> get_icon(std::string_view);

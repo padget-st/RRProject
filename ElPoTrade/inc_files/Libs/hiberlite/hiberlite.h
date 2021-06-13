@@ -1,7 +1,7 @@
 #ifndef _HIBERLITE_H_
 #define _HIBERLITE_H_
 
-#include <sqlite3.h>
+#include "sqlite3.h"
 
 #include "common.h"
 #include "shared_res.h"

@@ -1,0 +1,1 @@
+install(FILES lamp.jpg DESTINATION icons)
