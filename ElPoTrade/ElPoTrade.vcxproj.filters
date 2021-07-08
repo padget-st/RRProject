@@ -121,6 +121,15 @@
     <ClCompile Include="inc_files\Libs\hiberlite\Visitor.cpp">
       <Filter>Source Files\Libs\hiberlate</Filter>
     </ClCompile>
+    <ClCompile Include="inc_files\Common\ProductGroup.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\Common\ItemDocument.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="inc_files\GUI\GroupScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc_files\Services\ProductManager.h">
@@ -216,6 +225,12 @@
     <ClInclude Include="inc_files\Libs\hiberlite\Visitor.h">
       <Filter>Header Files\Libs\hiberlite</Filter>
     </ClInclude>
+    <ClInclude Include="inc_files\Common\ProductGroup.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_files\Common\ItemDocument.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="inc_files\GUI\MainScreen.h">
@@ -228,6 +243,9 @@
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
     <QtMoc Include="inc_files\GUI\LampScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="inc_files\GUI\GroupScreen.h">
       <Filter>Header Files\GUI</Filter>
     </QtMoc>
   </ItemGroup>

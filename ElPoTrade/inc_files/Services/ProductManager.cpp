@@ -1,12 +1,17 @@
 #include "ProductManager.h"
 
 ProductManager::ProductManager()
-	: m_pdm{ new ProductDataManager }
+	: m_pdm{ std::make_shared<ProductDataManager>() }
 {}
 
-std::vector<std::pair<Lamp, int>> ProductManager::get_catalog() const
+std::vector<Lamp> ProductManager::get_catalog() const
 {
 	return m_pdm->get_catalog();
+}
+
+std::vector<Lamp> ProductManager::get_grouped_catalog(int group_id) const
+{
+	return m_pdm->get_grouped_catalog(group_id);
 }
 
 Lamp ProductManager::get_lamp(int lamp_id) const
@@ -14,7 +19,12 @@ Lamp ProductManager::get_lamp(int lamp_id) const
 	return m_pdm->get_lamp(lamp_id);
 }
 
-ProductManager::~ProductManager()
+std::vector<ProductGroup> ProductManager::get_all_groups() const
 {
-	delete m_pdm;
+	return m_pdm->get_all_groups();
+}
+
+ProductGroup ProductManager::get_group(int group_id) const
+{
+	return m_pdm->get_group(group_id);
 }

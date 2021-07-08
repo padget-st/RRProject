@@ -97,8 +97,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="inc_files\Common\ItemDocument.cpp" />
     <ClCompile Include="inc_files\Common\Lamp.cpp" />
+    <ClCompile Include="inc_files\Common\ProductGroup.cpp" />
     <ClCompile Include="inc_files\DataAccess\ProductDataManager.cpp" />
+    <ClCompile Include="inc_files\GUI\GroupScreen.cpp" />
     <ClCompile Include="inc_files\GUI\LampScreen.cpp" />
     <ClCompile Include="inc_files\GUI\MainScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ProductScreen.cpp" />
@@ -119,8 +122,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc_files\Common\ItemDocument.h" />
     <ClInclude Include="inc_files\Common\Lamp.h" />
+    <ClInclude Include="inc_files\Common\ProductGroup.h" />
     <ClInclude Include="inc_files\DataAccess\ProductDataManager.h" />
+    <QtMoc Include="inc_files\GUI\GroupScreen.h" />
     <ClInclude Include="inc_files\Libs\hiberlite\BeanLoader.h" />
     <ClInclude Include="inc_files\Libs\hiberlite\BeanLoader_impl.hpp" />
     <ClInclude Include="inc_files\Libs\hiberlite\BeanUpdater.h" />

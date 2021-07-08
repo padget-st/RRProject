@@ -15,41 +15,36 @@ QPixmap ProductScreen::get_pixIcon(std::string_view iconName)
 }
 
 ProductScreen::ProductScreen(QWidget* wgt)
-	: QWidget{ wgt }, m_list{new QListWidget}, m_pb_close{new QPushButton }
+	: QWidget{ wgt }, m_list{new QListWidget(this)},
+	m_pb_close{new QPushButton("Close", this)}
 {
 	setAttribute(Qt::WA_DeleteOnClose);
 
-	m_pb_close->setText("Close");
 	connect(m_pb_close, SIGNAL(clicked()), SLOT(close()));
 	connect(m_pb_close, SIGNAL(clicked()), SIGNAL(signalClosed()));
 
 	connect(m_list, SIGNAL(itemDoubleClicked(QListWidgetItem*)), 
 		SIGNAL(signalItemSelected(QListWidgetItem*)));
 
-	QVBoxLayout* lay = new QVBoxLayout;
+	fill_in();
+
+	QVBoxLayout* lay = new QVBoxLayout(this);
 	lay->addWidget(m_list);
 	lay->addWidget(m_pb_close);
 	setLayout(lay);
 }
 
-void ProductScreen::show_catalog()
+void ProductScreen::fill_in()
 {
 	ProductManager pm;
-	std::vector<std::pair<Lamp, int>> product{ pm.get_catalog() };
-
+	std::vector<ProductGroup> product{ pm.get_all_groups() };
 	QListWidgetItem* list_item{ nullptr };
-	/*temporary*///QPixmap pix_icon{ get_pixIcon("lamp.jpg") };
+
 	for (auto& elem : product)
 	{
-		list_item = new QListWidgetItem("Name: " + QString(elem.first.name.c_str()) + "\nType: "
-			+ QString(elem.first.type.c_str()) + "\nPower: " + QString::number(elem.first.power), m_list);
-		list_item->setIcon(get_pixIcon(elem.first.images_url[0]));//(get_pixIcon("lamp.jpg"));
-		list_item->setData(Qt::UserRole, elem.second);
+		list_item = new QListWidgetItem(QString(elem.group_name.c_str()), m_list);
+		list_item->setIcon(get_pixIcon(elem.images_url[0]));
+		list_item->setData(Qt::UserRole, elem.group_id);
 	}
-	m_list->setIconSize(QSize(32, 32));
-}
-
-ProductScreen::~ProductScreen()
-{
-	delete layout();
+	m_list->setIconSize(QSize(size().height()/5, size().width()/4));
 }

@@ -11,10 +11,9 @@ private:
 	QListWidget* m_list;
 	QPushButton* m_pb_close;
 	QPixmap get_pixIcon(std::string_view);
+	void fill_in();
 public:
 	ProductScreen(QWidget* wgt = 0);
-	~ProductScreen();
-	void show_catalog();
 signals:
 	void signalClosed();
 	void signalItemSelected(QListWidgetItem*);

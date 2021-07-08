@@ -1,18 +1,16 @@
 #pragma once
 #include <QtWidgets>
+#include "Lamp.h"
 
 class LampScreen : public QWidget
 {
 	Q_OBJECT
 private:
-	QLabel* m_image;
-	QLabel* m_info;
+	QLabel* m_image, * m_info;
 	QPushButton* m_pb_close;
+	void fill_in(Lamp&);
 public:
-	LampScreen(QWidget* wgt = 0);
-	void setLabelImage(const QPixmap&);
-	void setLabelText(const QString&);
-	~LampScreen();
+	LampScreen(Lamp&, QWidget* wgt = 0);
 signals:
 	void signalClosed();
 };
