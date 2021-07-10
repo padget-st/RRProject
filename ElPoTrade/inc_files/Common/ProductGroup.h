@@ -14,7 +14,7 @@ struct ProductGroup
 		ar& HIBERLITE_NVP(doc_url);
 	}
 
-	int group_id;
+	int id;
 	std::string group_name;
 	std::string info;
 	std::vector<std::string> images_url;

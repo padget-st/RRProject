@@ -36,15 +36,15 @@ ProductScreen::ProductScreen(QWidget* wgt)
 
 void ProductScreen::fill_in()
 {
-	ProductManager pm;
-	std::vector<ProductGroup> product{ pm.get_all_groups() };
+	GroupManager pm;
+	std::vector<ProductGroup> v_groups{ pm.get_all() };
 	QListWidgetItem* list_item{ nullptr };
 
-	for (auto& elem : product)
+	for (auto& elem : v_groups)
 	{
 		list_item = new QListWidgetItem(QString(elem.group_name.c_str()), m_list);
 		list_item->setIcon(get_pixIcon(elem.images_url[0]));
-		list_item->setData(Qt::UserRole, elem.group_id);
+		list_item->setData(Qt::UserRole, elem.id);
 	}
 	m_list->setIconSize(QSize(size().height()/5, size().width()/4));
 }

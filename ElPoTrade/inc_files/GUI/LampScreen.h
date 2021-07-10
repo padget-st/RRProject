@@ -8,9 +8,9 @@ class LampScreen : public QWidget
 private:
 	QLabel* m_image, * m_info;
 	QPushButton* m_pb_close;
-	void fill_in(Lamp&);
+	void fill_in(const Lamp&);
 public:
-	LampScreen(Lamp&, QWidget* wgt = 0);
+	LampScreen(const Lamp&, QWidget* wgt = 0);
 signals:
 	void signalClosed();
 };

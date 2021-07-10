@@ -1,6 +1,6 @@
 #include "LampScreen.h"
 
-LampScreen::LampScreen(Lamp& lamp, QWidget* wgt)
+LampScreen::LampScreen(const Lamp& lamp, QWidget* wgt)
 	: QWidget{ wgt }, m_image{ new QLabel(this) },
 	m_info{ new QLabel(this) }, m_pb_close{new QPushButton("Close", this)}
 {
@@ -18,7 +18,7 @@ LampScreen::LampScreen(Lamp& lamp, QWidget* wgt)
 	setLayout(lay);
 }
 
-void LampScreen::fill_in(Lamp& lamp)
+void LampScreen::fill_in(const Lamp& lamp)
 {
 	m_image->setText("LAMP IMAGE???");
 	m_image->setAlignment(Qt::AlignCenter);

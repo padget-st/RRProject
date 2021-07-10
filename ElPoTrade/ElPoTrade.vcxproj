@@ -97,15 +97,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="inc_files\Common\Contact.cpp" />
     <ClCompile Include="inc_files\Common\ItemDocument.cpp" />
     <ClCompile Include="inc_files\Common\Lamp.cpp" />
     <ClCompile Include="inc_files\Common\ProductGroup.cpp" />
+    <ClCompile Include="inc_files\Common\Suggestion.cpp" />
     <ClCompile Include="inc_files\DataAccess\ProductDataManager.cpp" />
+    <ClCompile Include="inc_files\GUI\ContactScreen.cpp" />
+    <ClCompile Include="inc_files\GUI\DocumentScreen.cpp" />
+    <ClCompile Include="inc_files\GUI\DownloadDocScreen.cpp" />
     <ClCompile Include="inc_files\GUI\GroupScreen.cpp" />
     <ClCompile Include="inc_files\GUI\LampScreen.cpp" />
     <ClCompile Include="inc_files\GUI\MainScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ProductScreen.cpp" />
     <ClCompile Include="inc_files\GUI\ScreenStack.cpp" />
+    <ClCompile Include="inc_files\GUI\SuggestionScreen.cpp" />
     <ClCompile Include="inc_files\Libs\hiberlite\BeanLoader.cpp" />
     <ClCompile Include="inc_files\Libs\hiberlite\BeanUpdater.cpp" />
     <ClCompile Include="inc_files\Libs\hiberlite\ChildKiller.cpp" />
@@ -117,16 +123,25 @@
     <ClCompile Include="inc_files\Libs\hiberlite\sqlite3.c" />
     <ClCompile Include="inc_files\Libs\hiberlite\SQLiteStmt.cpp" />
     <ClCompile Include="inc_files\Libs\hiberlite\Visitor.cpp" />
+    <ClCompile Include="inc_files\Services\ContactManager.cpp" />
+    <ClCompile Include="inc_files\Services\DocumentManager.cpp" />
+    <ClCompile Include="inc_files\Services\GroupManager.cpp" />
     <ClCompile Include="inc_files\Services\ProductManager.cpp" />
     <ClCompile Include="inc_files\Services\ResourceManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc_files\Common\Contact.h" />
     <ClInclude Include="inc_files\Common\ItemDocument.h" />
     <ClInclude Include="inc_files\Common\Lamp.h" />
     <ClInclude Include="inc_files\Common\ProductGroup.h" />
+    <ClInclude Include="inc_files\Common\Suggestion.h" />
     <ClInclude Include="inc_files\DataAccess\ProductDataManager.h" />
     <QtMoc Include="inc_files\GUI\GroupScreen.h" />
+    <QtMoc Include="inc_files\GUI\DocumentScreen.h" />
+    <QtMoc Include="inc_files\GUI\DownloadDocScreen.h" />
+    <QtMoc Include="inc_files\GUI\ContactScreen.h" />
+    <QtMoc Include="inc_files\GUI\SuggestionScreen.h" />
     <ClInclude Include="inc_files\Libs\hiberlite\BeanLoader.h" />
     <ClInclude Include="inc_files\Libs\hiberlite\BeanLoader_impl.hpp" />
     <ClInclude Include="inc_files\Libs\hiberlite\BeanUpdater.h" />
@@ -154,6 +169,9 @@
     <ClInclude Include="inc_files\Libs\hiberlite\UpdateVisitor_tmpl.hpp" />
     <ClInclude Include="inc_files\Libs\hiberlite\Visitor.h" />
     <ClInclude Include="inc_files\Libs\hiberlite\Visitor_tmpl_impl.hpp" />
+    <ClInclude Include="inc_files\Services\ContactManager.h" />
+    <ClInclude Include="inc_files\Services\DocumentManager.h" />
+    <ClInclude Include="inc_files\Services\GroupManager.h" />
     <ClInclude Include="inc_files\Services\ProductManager.h" />
     <ClInclude Include="inc_files\Services\ResourceManager.h" />
     <QtMoc Include="inc_files\GUI\ScreenStack.h" />

@@ -13,7 +13,7 @@ struct ItemDocument
 		ar& HIBERLITE_NVP(doc_url);
 	}
 
-	int doc_id;
+	int id;
 	int outer_group_id;
 	std::string doc_name;
 	std::string doc_url;

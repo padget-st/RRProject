@@ -1,9 +1,10 @@
 #include "GroupScreen.h"
 
-GroupScreen::GroupScreen(ProductGroup& group, QWidget* wgt)
+GroupScreen::GroupScreen(const ProductGroup& group, QWidget* wgt)
 	: QScrollArea{ wgt }, m_pb_close{new QPushButton("Close", this)},
 	m_pb_left{new QPushButton("<", this)}, m_pb_right{new QPushButton(">", this)},
-	m_list{new QListWidget(this)}, m_info_text{new QLabel(this)}, m_info_img{new QLabel(this)},
+	m_prod_list{new QListWidget(this)}, m_doc_list{new QListWidget(this)},
+	m_info_text{new QLabel(this)}, m_info_img{new QLabel(this)},
 	m_img_viewer{new QLabel(this)}, v_images{get_images(group.images_url)},
 	img_count{}
 {
@@ -12,13 +13,16 @@ GroupScreen::GroupScreen(ProductGroup& group, QWidget* wgt)
 	connect(m_pb_close, SIGNAL(clicked()), SLOT(close()));
 	connect(m_pb_close, SIGNAL(clicked()), SIGNAL(signalClosed()));
 
-	connect(m_list, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-		SIGNAL(signalItemSelected(QListWidgetItem*)));
+	connect(m_prod_list, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
+		SIGNAL(signalProdSelected(QListWidgetItem*)));
+	connect(m_doc_list, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
+		SIGNAL(signalDocSelected(QListWidgetItem*)));
 
 	connect(m_pb_left, SIGNAL(clicked()), SLOT(slotSetLeftImg()));
 	connect(m_pb_right, SIGNAL(clicked()), SLOT(slotSetRightImg()));
 
-	QSize pb_lr_size(30, 30);
+	QSize pb_lr_size((size().width() / GROUP_SCR_LR_W_SCALE),
+		size().height()/GROUP_SCR_LR_H_SCALE);
 	m_pb_left->setMaximumSize(pb_lr_size);
 	m_pb_left->setDisabled(true);
 	m_pb_right->setMaximumSize(pb_lr_size);
@@ -34,7 +38,8 @@ GroupScreen::GroupScreen(ProductGroup& group, QWidget* wgt)
 	vert_lay->addLayout(horiz_lay.release());
 	vert_lay->addWidget(m_info_text);
 	vert_lay->addWidget(m_info_img);
-	vert_lay->addWidget(m_list);
+	vert_lay->addWidget(m_prod_list);
+	vert_lay->addWidget(m_doc_list);
 	vert_lay->addWidget(m_pb_close);
 
 	QWidget* wgt_area = new QWidget(this);
@@ -43,7 +48,7 @@ GroupScreen::GroupScreen(ProductGroup& group, QWidget* wgt)
 	setWidget(wgt_area);
 }
 
-void GroupScreen::fill_in(ProductGroup& group)
+void GroupScreen::fill_in(const ProductGroup& group)
 {
 	m_img_viewer->setPixmap(v_images[0]);
 	m_img_viewer->setAlignment(Qt::AlignCenter);
@@ -53,16 +58,25 @@ void GroupScreen::fill_in(ProductGroup& group)
 	m_info_img->setAlignment(Qt::AlignCenter);
 
 	ProductManager pm;
-	std::vector<Lamp> v_lamps{ pm.get_grouped_catalog(group.group_id) };
-	QListWidgetItem* list_item{ nullptr };
+	std::vector<Lamp> v_lamps{ pm.get_grouped(group.id) };
+	QListWidgetItem* list_prod{ nullptr };
 	for (auto& elem : v_lamps)
 	{
-		list_item = new QListWidgetItem(QString(elem.name.c_str()), m_list);
-		list_item->setData(Qt::UserRole, elem.lamp_id);
+		list_prod = new QListWidgetItem(QString(elem.name.c_str()), m_prod_list);
+		list_prod->setData(Qt::UserRole, elem.id);
+	}
+
+	DocumentManager dm;
+	std::vector<ItemDocument> v_docs{ dm.get_grouped(group.id) };
+	QListWidgetItem* list_doc{ nullptr };
+	for (auto& elem : v_docs)
+	{
+		list_doc = new QListWidgetItem(QString(elem.doc_name.c_str()), m_doc_list);
+		list_doc->setData(Qt::UserRole, elem.id);
 	}
 }
 
-std::vector<QPixmap> GroupScreen::get_images(std::vector<std::string>& v_images)
+std::vector<QPixmap> GroupScreen::get_images(const std::vector<std::string>& v_images)
 {
 	ResourceManager rm;
 	std::vector<uchar> v_icon;
@@ -76,7 +90,8 @@ std::vector<QPixmap> GroupScreen::get_images(std::vector<std::string>& v_images)
 		{
 			throw std::runtime_error("can't open an icon");
 		}
-		pix = pix.scaled(QSize(size().width()/2.35, size().height()/2));
+		pix = pix.scaled(QSize(size().width()/GROUP_SCR_PIX_W_SCALE,
+			size().height()/GROUP_SCR_PIX_H_SCALE));
 		v_pix.push_back(pix);
 	}
 

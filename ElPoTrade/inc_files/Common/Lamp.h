@@ -37,7 +37,7 @@ struct Lamp
 		ar& HIBERLITE_NVP(images_url);
 	}
 
-	int lamp_id;
+	int id;
 	int outer_group_id;
 	std::string name;
 	std::string dimensions;

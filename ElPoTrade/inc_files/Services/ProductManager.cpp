@@ -1,30 +1,20 @@
 #include "ProductManager.h"
 
 ProductManager::ProductManager()
-	: m_pdm{ std::make_shared<ProductDataManager>() }
+	: m_pdm{ std::make_unique<ProductDataManager>() }
 {}
 
-std::vector<Lamp> ProductManager::get_catalog() const
+std::vector<Lamp> ProductManager::get_all() const
 {
-	return m_pdm->get_catalog();
+	return m_pdm->get_all<Lamp>();
 }
 
-std::vector<Lamp> ProductManager::get_grouped_catalog(int group_id) const
+std::vector<Lamp> ProductManager::get_grouped(int group_id) const
 {
-	return m_pdm->get_grouped_catalog(group_id);
+	return m_pdm->get_grouped<Lamp>(group_id);
 }
 
-Lamp ProductManager::get_lamp(int lamp_id) const
+Lamp ProductManager::get_item(int item_id) const
 {
-	return m_pdm->get_lamp(lamp_id);
-}
-
-std::vector<ProductGroup> ProductManager::get_all_groups() const
-{
-	return m_pdm->get_all_groups();
-}
-
-ProductGroup ProductManager::get_group(int group_id) const
-{
-	return m_pdm->get_group(group_id);
+	return m_pdm->get_item<Lamp>(item_id);
 }

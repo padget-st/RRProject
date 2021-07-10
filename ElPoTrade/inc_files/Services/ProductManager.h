@@ -6,14 +6,11 @@
 class ProductManager
 {
 private:
-	std::shared_ptr<ProductDataManager> m_pdm;
+	std::unique_ptr<ProductDataManager> m_pdm;
 public:
 	ProductManager();
 
-	std::vector<Lamp> get_catalog() const;
-	std::vector<Lamp> get_grouped_catalog(int) const;
-	Lamp get_lamp(int) const;
-	
-	std::vector<ProductGroup> get_all_groups() const;
-	ProductGroup get_group(int) const;
+	std::vector<Lamp> get_all() const;
+	std::vector<Lamp> get_grouped(int group_id) const;
+	Lamp get_item(int) const;
 };
