@@ -4,6 +4,10 @@
 #include "GroupManager.h"
 #include "ResourceManager.h"
 
+constexpr int PROD_SCR_IMG_W_SCALE{ 5 };
+constexpr int PROD_SCR_IMG_H_SCALE{ 4 };
+
+
 class ProductScreen : public QWidget
 {
 	Q_OBJECT

@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\gTest\googletest\googletest\src\gtest_main.cc">
+    <ClCompile Include="..\gTest\googletest\src\gtest_main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gTest\googletest\googletest\src\gtest-all.cc">
+    <ClCompile Include="..\gTest\googletest\src\gtest-all.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

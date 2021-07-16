@@ -60,13 +60,13 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc_files\Libs\hiberlite;inc_files\Services;inc_files\Models;inc_files\GUI;inc_files\DataAccess;inc_files\Common;database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade\database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc_files\Libs\hiberlite;inc_files\Services;inc_files\Models;inc_files\GUI;inc_files\DataAccess;inc_files\Common;database;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>

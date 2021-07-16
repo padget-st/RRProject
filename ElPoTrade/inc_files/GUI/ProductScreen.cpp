@@ -46,5 +46,6 @@ void ProductScreen::fill_in()
 		list_item->setIcon(get_pixIcon(elem.images_url[0]));
 		list_item->setData(Qt::UserRole, elem.id);
 	}
-	m_list->setIconSize(QSize(size().height()/5, size().width()/4));
+	m_list->setIconSize(QSize(size().height()/PROD_SCR_IMG_W_SCALE,
+		size().width()/PROD_SCR_IMG_H_SCALE));
 }

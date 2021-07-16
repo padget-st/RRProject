@@ -55,17 +55,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>S:\perfect_circle\RRProject\ElPoTrade\database;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade;S:\perfect_circle\gTest\googletest\googletest;S:\perfect_circle\gTest\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\ElPoTrade\database;..\ElPoTrade\inc_files\Services;..\ElPoTrade\inc_files\Models;..\ElPoTrade\inc_files\Libs\hiberlite;..\ElPoTrade\inc_files\GUI;..\ElPoTrade\inc_files\DataAccess;..\ElPoTrade\inc_files\Common;..\RRProject\ElPoTrade;..\gTest\googletest;..\gTest\googletest\include;$(IncludePath)</IncludePath>
     <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <IncludePath>S:\perfect_circle\RRProject\ElPoTrade\database;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;S:\perfect_circle\RRProject\ElPoTrade;S:\perfect_circle\gTest\googletest\googletest;S:\perfect_circle\gTest\googletest\googletest\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\ElPoTrade\database;..\ElPoTrade\inc_files\Services;..\ElPoTrade\inc_files\Models;..\ElPoTrade\inc_files\Libs\hiberlite;..\ElPoTrade\inc_files\GUI;..\ElPoTrade\inc_files\DataAccess;..\ElPoTrade\inc_files\Common;..\RRProject\ElPoTrade;..\gTest\googletest;..\gTest\googletest\include;$(IncludePath)</IncludePath>
     <SourcePath>$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ElPoTrade\inc_files\Services;..\ElPoTrade\inc_files\Models;..\ElPoTrade\inc_files\Libs\hiberlite;..\ElPoTrade\inc_files\GUI;..\ElPoTrade\inc_files\DataAccess;..\ElPoTrade\inc_files\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -74,7 +74,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>S:\perfect_circle\RRProject\ElPoTrade\inc_files\Services;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Models;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Libs\hiberlite;S:\perfect_circle\RRProject\ElPoTrade\inc_files\GUI;S:\perfect_circle\RRProject\ElPoTrade\inc_files\DataAccess;S:\perfect_circle\RRProject\ElPoTrade\inc_files\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ElPoTrade\inc_files\Services;..\ElPoTrade\inc_files\Models;..\ElPoTrade\inc_files\Libs\hiberlite;..\ElPoTrade\inc_files\GUI;..\ElPoTrade\inc_files\DataAccess;..\ElPoTrade\inc_files\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
