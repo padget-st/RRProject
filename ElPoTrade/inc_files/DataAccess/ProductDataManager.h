@@ -8,6 +8,7 @@
 #include "Suggestion.h"
 
 constexpr std::string_view DB_FILE_PATH_PRODUCTS{ "database/DB_FILE.db" };
+constexpr int DATA_MANAGER_MIN_ID{ 1 };
 
 class ProductDataManager
 {
@@ -50,8 +51,14 @@ std::vector<T> ProductDataManager::get_all()
 template<typename T>
 std::vector<T> ProductDataManager::get_grouped(int group_id)
 {
-	std::vector<T> v_items;
 	auto temp{ m_db.getAllBeans<T>() };
+
+	if (group_id < DATA_MANAGER_MIN_ID || group_id > temp.size())
+	{
+		throw std::runtime_error("Wrong group_id");
+	}
+
+	std::vector<T> v_items;
 	T item;
 
 	for (auto elem : temp)

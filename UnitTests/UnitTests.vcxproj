@@ -107,7 +107,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\Contact.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\ItemDocument.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\Lamp.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\ProductGroup.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\Suggestion.cpp" />
     <ClCompile Include="..\ElPoTrade\inc_files\DataAccess\ProductDataManager.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\ContactScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\DocumentScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\DownloadDocScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\GroupScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\LampScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\MainScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\ProductScreen.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\ScreenStack.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\SuggestionScreen.cpp" />
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\BeanLoader.cpp" />
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\BeanUpdater.cpp" />
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\ChildKiller.cpp" />
@@ -119,6 +133,10 @@
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\sqlite3.c" />
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\SQLiteStmt.cpp" />
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\Visitor.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\ContactManager.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\DocumentManager.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\GroupManager.cpp" />
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\ProductManager.cpp" />
     <ClCompile Include="..\ElPoTrade\inc_files\Services\ResourceManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -130,6 +148,33 @@
     <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">
       <Project>{0db25be4-4978-45bc-910c-4fa3f1cf8eec}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\ContactScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\DocumentScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\DownloadDocScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\GroupScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\LampScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\MainScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\ProductScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\ScreenStack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\SuggestionScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

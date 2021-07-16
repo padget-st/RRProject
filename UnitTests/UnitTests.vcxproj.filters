@@ -17,49 +17,153 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{d00f9d33-2a37-41c6-ae1a-e756d25185ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess">
+      <UniqueIdentifier>{7b25711f-8d07-434c-8a48-c8dadf5bf980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{f96a2ad0-1f99-4189-96e3-ec5fee655f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Libs">
+      <UniqueIdentifier>{1f50c94a-8665-4f72-9b91-70db4bb08217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Libs\hiberlate">
+      <UniqueIdentifier>{270907be-063a-4eef-af5f-6d3811396dd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Services">
+      <UniqueIdentifier>{11ed0960-e469-4fcb-83d7-1ea4ccdf186d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{18f4372d-9cd3-4814-8e22-4ae2676f9635}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\BeanLoader.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\Contact.cpp">
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\BeanUpdater.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\ItemDocument.cpp">
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\ChildKiller.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\Lamp.cpp">
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\CppModel.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\ProductGroup.cpp">
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\Database.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\ModelExtractor.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\Common\Suggestion.cpp">
+      <Filter>Source Files\Common</Filter>
     </ClCompile>
     <ClCompile Include="..\ElPoTrade\inc_files\DataAccess\ProductDataManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\DataAccess</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\Registry.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\ContactScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\shared_res.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\DocumentScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\sqlite3.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\DownloadDocScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\GroupScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\LampScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\MainScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\ProductScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\ScreenStack.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\GUI\SuggestionScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
     </ClCompile>
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\SQLiteStmt.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Libs\hiberlate</Filter>
     </ClCompile>
     <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\Visitor.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\sqlite3.c">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\shared_res.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\Registry.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\ModelExtractor.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\Database.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\CppModel.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\ChildKiller.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\BeanUpdater.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Libs\hiberlite\BeanLoader.cpp">
+      <Filter>Source Files\Libs\hiberlate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\ContactManager.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\DocumentManager.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\GroupManager.cpp">
+      <Filter>Source Files\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ElPoTrade\inc_files\Services\ProductManager.cpp">
+      <Filter>Source Files\Services</Filter>
     </ClCompile>
     <ClCompile Include="..\ElPoTrade\inc_files\Services\ResourceManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Services</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\ContactScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\DocumentScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\DownloadDocScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\GroupScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\LampScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\MainScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\ProductScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\ScreenStack.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
+    <QtMoc Include="..\ElPoTrade\inc_files\GUI\SuggestionScreen.h">
+      <Filter>Header Files\GUI</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

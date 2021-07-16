@@ -1,6 +1,6 @@
 #pragma once
 #include <QtWidgets>
-#include "Contact.h";
+#include "Contact.h"
 
 class ContactScreen : public QWidget
 {
